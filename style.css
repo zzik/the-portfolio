@@ -1,0 +1,364 @@
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.m-title {
+    display: none;
+}
+
+ main {
+    min-height: 100vh;
+    background: linear-gradient(to right top, #65efc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: poppins, sans-serif;
+}
+.face {
+    border-radius: 90%;
+    height: 10rem;
+    width: 10rem;
+    background:#eafaf7;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+h1{
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+    font-size: 4rem;
+}
+h3,h2,p{
+    color: #658ec6;
+    font-weight: 400;
+    opacity: 0.8;
+}
+h4 {
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+}
+.glass {
+    background: white;
+    min-height: 80vh;
+    width: 60%;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+    border-radius: 2rem;
+    z-index: 3;
+    backdrop-filter: blur(2rem);
+    display: flex;
+}
+.circle1, .circle2 {
+    background: white;
+    width: 20rem;
+    height: 20rem;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.8),rgba(255,255,255,0.2));
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+}
+.circle1 {
+    top: 5%;
+    left: 10%;
+}
+.circle2{
+    bottom: 8%;
+    right: 10%;
+}
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.2),rgba(255,255,255,0.3));
+    border-radius: 2rem;
+}
+.bio {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.link{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+    text-align: left;
+}
+link h2{
+    padding: 0rem 2rem;
+}
+.name {
+    margin: 2rem;
+}
+.subtitle{
+    margin: 0rem 0rem 0rem 0rem;
+}
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 4rem;
+}
+.card{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.2),rgba(255,255,255,0.3));   
+    box-shadow: 8px 8px 8px rgba(101, 239, 201,0.5);
+    border-radius: 2rem;
+    transition: ease-out 0.3s;
+    position: relative;
+}
+.card:hover{
+    background: linear-gradient(to left top, rgba(255,255,255,0.4),rgba(255,255,255,0.1));
+    width: 70%;
+    box-shadow: 8px 8px 8px rgba(101, 239, 201,0.2);
+}
+.card:hover .pro{
+    
+    background: linear-gradient(to right top, rgba(101, 239, 201,0.4), #6cdbeb);
+}
+.pro h3 {
+    transition: ease-in-out 0.3s;
+}
+.card:hover .pro h3{
+    color: rgb(29, 212, 212);
+}
+.card h2 {
+    padding: 1rem;
+}
+.initial{
+    visibility: visible;
+    opacity: 1;
+    transition: ease-in-out 0.3s;
+}
+.card:hover .initial {
+    visibility: hidden;
+    opacity: 0;
+}
+.aftermath {
+    visibility: hidden;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    position: absolute;
+    left: 0;
+    padding: 1rem;
+    text-decoration: none;
+}
+a:hover {
+    color: #394b64;
+}
+.demo{
+    position: absolute;
+    left: 35%;
+}
+.card:hover .aftermath   {
+    visibility: visible ;
+    opacity: 1;
+}
+.pro {
+    background: linear-gradient(to right top, rgb(101, 239, 201), #6cdbeb);
+    border-radius: 1.5rem;
+    padding: .3rem 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*              MOBILE CSS                */
+.m-link{
+    display: none;
+}
+
+@media only screen and (max-width: 1320px) {
+    .glass{
+        flex-direction: column;
+        width: 85vw;
+        margin: 8vh;
+        margin-top: 6vh;
+        background: linear-gradient(to right bottom, rgba(255,255,255,0.01),rgba(255,255,255,0.7));
+        /**/
+    }
+
+    .face {
+        margin-top: -30px;
+        height: 6.5rem;
+        width: 6.5rem;
+    }
+    h1 {
+        font-size: 2.3rem;
+    }
+    h2 {
+        margin-top: -0.65rem;
+        font-size: 1.32rem;
+    }
+    .dashboard {
+        /*
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        background: linear-gradient(to right bottom, rgba(255,255,255,0.2),rgba(255,255,255,0.3));
+        border-radius: 2rem;*/
+        /*margin-top: 30vh;*/
+        background: linear-gradient(to bottom, rgba(255,255,255,0),rgba(255,255,255,0));
+    }
+
+    .link {
+        display: none;
+    }
+
+    .links {
+        margin-top: 0;
+    }
+
+    .m-title {
+        display: inherit;
+    }
+
+    .m-link{
+        display: inherit;
+    }
+    .m-outter {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 3.2rem;
+        background: linear-gradient(to bottom left, rgba(255,255,255,0.4),rgba(107, 218, 235,0.05));
+        border-radius: 3rem;
+    }
+    .m-up {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+    }
+    .m-down {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+    }
+    .m-link {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin-top: 0;
+        margin-left: 2rem;
+        height: 4em;
+        text-align: center;
+        border-radius: 5rem;
+    }
+    .m-link h2 {
+        font-size: 1.1rem;
+  
+    }
+
+    .name{
+        display: none;
+    }
+
+    .circle1, .circle2 {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .circle1 {
+        top: 10%;
+    }
+    .cards {
+    justify-content: start;
+    margin-left: -1.5rem;
+    margin-top: 2.5rem;
+    }
+    .card {
+        /*width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem;
+        background: linear-gradient(to right bottom, rgba(255,255,255,0.2),rgba(255,255,255,0.3));   
+        box-shadow: 8px 8px 8px rgba(101, 239, 201,0.5);
+        border-radius: 2rem;
+        transition: ease-out 0.3s;
+        position: relative;*/
+        width: 100%;
+        height: auto;
+    }
+    .card:hover{
+        background: linear-gradient(to left top, rgba(255,255,255,0.4),rgba(255,255,255,0.1));
+        width: 90%;
+        box-shadow: 8px 8px 8px rgba(101, 239, 201,0.2);
+    }
+    .card:hover .pro{
+        opacity: 0;
+    }
+    .pro h3 {
+        transition: ease-in-out 0.3s;
+        
+    }
+    .card:hover .pro h3{
+        opacity: 0;
+    }
+    .card h2 {
+        margin: 0;
+    }
+    .initial{
+        visibility: visible;
+        opacity: 1;
+        transition: ease-in-out 0.3s;
+    }
+    .card:hover .initial {
+        visibility: hidden;
+        opacity: 0;
+    }
+    .aftermath {
+        visibility: hidden;
+        opacity: 0;
+        transition: ease-in-out 0.3s;
+        position: absolute;
+        left: 0;
+        padding: 1rem;
+        text-decoration: none;
+        pointer-events: inherit;
+    }
+    a:hover {
+        color: #394b64;
+    }
+    .demo{
+        position: absolute;
+        left: 35%;
+    }
+    .card:hover .aftermath   {
+        visibility: visible ;
+        opacity: 1;
+    }
+    .pro {
+        background: linear-gradient(to right top, rgb(101, 239, 201), #6cdbeb);
+        border-radius: 1.5rem;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        transition: ease-in 0.3s;
+        padding: 0.8rem;
+    }
+  }
